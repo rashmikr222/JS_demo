@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 for="blogContent">Enter your comments</h4>
+                <!-- <input type="text" name="blogContent" id="blogContent" 
+                 onkeypress="displayCount(Event)" autocomplete="off"> -->
+                 <input type="text" name="blogContent" id="blogContent" onkeypress="displayCount()" 
+                  autocomplete="off">
+                 <p id="numberOfCharacters" class=></p>
+                <button class="btn btn-primary" id="enableInput" >edit</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <input type="checkbox" name="groceries" class="item" id="bread" value="Bread"> Bread <br>
+                <input type="checkbox" name="groceries" class="item" id="biscuits" value="Biscuits"> Biscuits <br>
+                <input type="checkbox" name="groceries" class="item" id="maggie" value="Maggie">Maggie <br>
+                <input type="checkbox" name="groceries" class="item" id="jam" value="Jam">Jam <br>
+                <button class="btn btn-danger" onclick="purchaseList()">Add</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!--  -->
+    <input type="text" name="blogContent" id="btncounter" 
+                  autocomplete="off">
+    <!-- <button id="btncounter">add</button> -->
+    <p id="countNum">0</p>
+    <script src="assets/js/jquery.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./custom.js"></script>
+    <script src="./swappingTwoNumbers.js"></script>
+    <script src="./strings/methodConcat.js"></script>
+    <script src="./strings/blogsContent.js"></script>
+</body>
+</html>
