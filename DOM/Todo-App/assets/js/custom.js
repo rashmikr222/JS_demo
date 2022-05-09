@@ -15,11 +15,11 @@
 // REMOVE ALL P TAGS THAT HAVE "the" IN TEXT
 const todos = document.querySelectorAll('p');
 console.log(todos);
-const remainTodo = todos.forEach(function(todo){
-   let isFind =  todo.textContent.includes("the");
-   if(isFind){
-       todo.remove();
-   }
+const remainTodo = todos.forEach(function (todo) {
+    let isFind = todo.textContent.includes("the");
+    if (isFind) {
+        todo.remove();
+    }
 })
 console.log(remainTodo);
 
@@ -35,37 +35,45 @@ document.querySelector('body').appendChild(newTodo);
 
 // let render task from javascript insted of frontend
 const tasks = [{
-    text : "washing the clothes",
+    text: "washing the clothes",
     completed: false
 },
 {
-    text:"cleaning the utensiles",
-    completed:true
+    text: "cleaning the utensiles",
+    completed: true
 },
 {
     text: "walking for an hour",
-    completed:false
+    completed: false
 },
 {
     text: "Excercise for half an hour",
-    completed:true
+    completed: true
 },
 {
     text: "writing the notes",
-    completed:false
+    completed: false
 }
 ]
 
-let getTask = function(task)
-{
-    let index = tasks.findIndex(function(task){
-        if(tasks.completed === false){
-            
-        }
-    })
+
+
+let getTask = function (task) {
+    // console.log(task,index);
+    if (task.completed === false) {
+        // console.log(task.text);
+        // create new element
+
+        let taskList = document.createElement('li');
+        // to add class name to the element
+        taskList.className = "list-unstyled";
+        taskList.style.fontSize = "20px";
+        // to display in webpage
+        taskList.innerHTML = `${task.text} `;
+        //  append the new element to the existing element
+        document.querySelector('ul').appendChild(taskList);
+
+    }
+
 }
-let left = tasks.forEach(getTask);
-
-console.log(left);
-
-
+tasks.filter(getTask)
