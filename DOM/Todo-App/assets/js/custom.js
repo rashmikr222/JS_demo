@@ -77,3 +77,25 @@ let getTask = function (task) {
 
 }
 tasks.filter(getTask)
+
+// or 
+
+// another method of display data into screen
+const pendingTask = tasks.filter(function(task){
+    return task.completed === false
+})
+
+const pendingList = document.createElement("h2");
+pendingList.textContent = `you have ${pendingTask.length} todo\'s left`;
+document.querySelector('body').appendChild(pendingList);
+
+// now traverse through and display task
+
+tasks.forEach(function(task){
+    const newlist = document.createElement('ul');
+    newlist.className = "newTask";
+    document.querySelector('h2').appendChild(newlist);
+    const listItem = document.createElement('li');
+    listItem.innerHTML = task.text;
+    document.querySelector('.newTask').appendChild(listItem);
+})

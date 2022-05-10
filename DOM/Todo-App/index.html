@@ -10,13 +10,23 @@
 </head>
 <body>
     <h1>Todo App</h1>
-    <div>
-        <ul>
-            
-        </ul>
+    <input id="search-task" type="text" placeholder="filter task">
+
+    <div id="task-display">
+
     </div>
+    <!-- <p id="result"></p> -->
+    <!-- <div>
+        <ul>
+            <li class="taskList list-unstyled">writing a book</li>
+            <li class="taskList list-unstyled">reading a book</li>
+        </ul>
+    </div> -->
+    <button class="btn btn-primary mt-3" id="createButton">Create Todo</button>
+    <button class="btn btn-danger mt-3" id="deleteButton">Delete Todo</button>
     <script src="assets/js/jquery.slim.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <!-- <script src="assets/js/custom.js"></script> -->
+    <script src="assets/js/eventListener.js"></script>
 </body>
 </html>
