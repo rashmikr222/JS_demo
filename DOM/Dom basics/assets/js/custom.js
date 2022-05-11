@@ -1,0 +1,1 @@
+document.getElementById("second").classList.add("huge");

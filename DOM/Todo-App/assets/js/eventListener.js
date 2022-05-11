@@ -30,9 +30,9 @@ const tasks = [{
 
 // another way of accessing element from html
 
-document.querySelector('#createButton').addEventListener('click', function (e) {
-    console.log("create todo");
-})
+// document.querySelector('#createButton').addEventListener('click', function (e) {
+//     console.log("create todo");
+// })
 
 // to remove all the todo's
 document.querySelector('#deleteButton').addEventListener('click', function (e) {
@@ -48,10 +48,10 @@ document.querySelector('#deleteButton').addEventListener('click', function (e) {
 })
 // how to read user inputs
 
-document.querySelector("#search-task").addEventListener('input', function (e) {
-    let value = document.querySelector("#search-task").value;
-    console.log(value);
-})
+// document.querySelector("#search-task").addEventListener('input', function (e) {
+//     let value = document.querySelector("#search-task").value;
+//     console.log(value);
+// })
 
 let filters = {
     searchText: ""
@@ -80,14 +80,14 @@ let filters = {
 // })
 
 
-let renderedFilters = function (tasks,filters){
-    const getFilters = tasks.filter(function(task){
+let renderedFilters = function (tasks, filters) {
+    const getFilters = tasks.filter(function (task) {
         return task.text.toLowerCase().includes(filters.searchText.toLowerCase())
     })
 
-    document.querySelector("#task-display").innerHTML='';
+    document.querySelector("#task-display").innerHTML = '';
 
-    getFilters.forEach(function(task){
+    getFilters.forEach(function (task) {
         const taskele = document.createElement('p');
         taskele.textContent = task.text;
         document.querySelector("#task-display").appendChild(taskele);
@@ -95,7 +95,24 @@ let renderedFilters = function (tasks,filters){
 }
 
 
-document.querySelector('#search-task').addEventListener('input',function(e){
+document.querySelector('#search-task').addEventListener('input', function (e) {
     filters.searchText = e.target.value;
-    renderedFilters(tasks,filters)
+    renderedFilters(tasks, filters)
 })
+
+
+// accessing form input 
+// submit handler and preventing default action
+document.querySelector('#form-input').addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(e.target.elements.newTask.value);
+    let newText = e.target.elements.newTask.value;
+    let task = {
+        text: newText,
+        completed: false
+    }
+    tasks.push(task);
+    document.querySelector("#task-display").innerHTML='';
+    console.log(tasks);
+})
+

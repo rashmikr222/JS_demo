@@ -17,7 +17,7 @@ countButton.forEach(function (button) {
                 count = count - 1;
                 result.textContent = count;
             } else if (count === 0) {
-                count = count;
+                // count = count;
                 result.textContent = count;
             }
         }
