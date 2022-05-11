@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/todo.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-8">
+                <input type="text" placeholder="filter todo" id="filter-input">
+                <h2>Todo's <span id="todoLength"></span> </h2>
+                <div>
+                    <ul id="filteredList">
+
+                    </ul>
+                </div>
+                <div id="todos">
+
+                    <ul id="todoList" class="list-unstyled">
+
+                    </ul>
+                </div>
+                <form action="" id="todoInput">
+                    <input type="text" placeholder="create a todo" name="newTodo">
+                    <button class="btn btn-primary">create Todo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/new-todo.js"></script>
+</body>
+
+</html>

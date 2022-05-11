@@ -112,7 +112,8 @@ document.querySelector('#form-input').addEventListener('submit', function (e) {
         completed: false
     }
     tasks.push(task);
-    document.querySelector("#task-display").innerHTML='';
+    renderedFilters(tasks, filters)
+
     console.log(tasks);
 })
 
