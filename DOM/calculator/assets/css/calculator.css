@@ -1,0 +1,27 @@
+.calculator #result{
+    font-size: 60px;
+    font-weight: 600;
+    padding: 20px 25px 20px 20px;
+    background: #232323;
+    color: #ffffff;
+    border-radius: 25px 25px 0px 0px; /* top left and right corner */
+}
+.calculator .operator{
+    background-color: #e8e9e9;
+    color: #202020;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px 20px 20px 20px;
+    border: 2px solid black;
+}
+.calculator .operand{
+    background-color: #e8e9e9;
+    color: #202020;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 30px 30px 30px 30px;
+    border: 2px solid black;
+}
+.calculator .equal{
+    height: 327px;
+}

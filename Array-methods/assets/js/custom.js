@@ -191,3 +191,72 @@ console.log("with gst",GST);
 })
 // console.log(shoppingCart);
 
+// let itemArry = ["buy food","go shopping"];
+
+// let findIndex = function(item){
+//     let itemIndex = itemArry.findIndex(function(item){
+        // return itemIndex
+//         console.log(itemIndex +" " +item);
+//     })
+
+// }
+
+
+
+
+
+// findIndex(itemArry,"buy food")
+// console.log(itemIndex);
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// expected output: 3
+
+// findindex
+
+
+const numberArr = [1,2,3,4,10];
+
+let large = numberArr.findIndex(function(number,index,newAr){
+    if(number > 2){
+    console.log("number found in the index"+index+" value"+number);
+    }
+    
+})
+// find array method
+// let itemArry = [{
+//     title:"buy food",
+//     completed:false
+// },{
+//     title:"go shopping",
+//     completed:true
+// },
+// {
+//     title:"walking",
+//     completed:false
+// }];
+// let delTask = function(itemArry,itemTitle){
+// const index = itemArry.findIndex(function(item){
+//     return item.title.toLowerCase() === itemTitle.toLowerCase()
+// })
+// if(index >-1){
+//     const element = itemArry.find(function(item){
+//         return item.title.toLowerCase() === itemTitle.toLowerCase();
+//     })
+    // console.log(element);
+//     itemArry.splice(index,1)
+//     console.log("array element",itemArry);
+// }
+// }
+// delTask(itemArry,"walking")
+
+// ***********
+// 
+
+let itemList = [];
+document.querySelector('#createButton').addEventListener('click',function(){
+    let listItem = document.createElement('li');
+    document.querySelector('ul').appendChild(listItem)
+})
