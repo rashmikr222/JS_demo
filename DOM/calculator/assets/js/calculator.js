@@ -1,33 +1,45 @@
+
 let operators = document.querySelectorAll(".operator");
 console.log("operator",operators);
 operators.forEach(function(operator){
     operator.addEventListener('click',function(e){
-        let currentTargetproperty = e.target.classList[4];
-        console.log(e.target.classList[4]);
-        if(currentTargetproperty == "addition"){
-            add();
-        }
-        if(currentTargetproperty == "substraction"){
-            sub();
-        }
-        if(currentTargetproperty == "multiplication"){
-            mul();
-        }
-        if(currentTargetproperty == "division"){
-            div();
+        let buttonInnerText = this.innerHTML;
+        switch (buttonInnerText) {
+            case '+':
+                add(num1,num2)                
+                break;
+        case '-':
+            let sub = new Operand(4,6,sub);
+            sub.calculate();
+            break;
+            case 'X':
+                let mul = new Operand(8,9,mul)
+                mul.calculate();
+                break;
+                case '/':
+                    let div = new Operand(20,2,div)
+                    div.calculate();
+                    break;
+            default: console.log("not a function");
+                break;
         }
     })
 })
 
-function add(){
-alert("addition")
+let calculate =  function (num1,num2,operator)
+{
+    return operator(num1,num2);
 }
-function sub(){
-    alert("substraction")
+console.log("result",calculate);
+function add(num1,num2){
+ return num1 + num2
+}
+function sub(num1,num2){
+    return num1 - num2
     }
-    function mul(){
-        alert("multiplication")
+    function mul(num1,num2){
+        return num1 * num2
         }
-        function  div(){
-            alert("division")
+        function  div(num1,num2){
+            return num1 / num2
             }
