@@ -56,9 +56,59 @@
 const Hangman = function (word, noOfGuessesLeft) {
     this.word = word.toLowerCase().split('');
     this.noOfGuessesLeft = noOfGuessesLeft;
-    this.guessedLetter = []; //hardCode value
+    this.guessedLetter = [];
+    this.status = "playing"
 }
 
+Hangman.prototype.calculateStatus = function(){
+    // array method - every .This returns either true or false 
+// this method tests whether all the elements in the array pass the test implemented by the provided function
+// if the letter is present in the guessedLetter  then it will return true
+let finished = this.word.every((letter)=>{
+    return this.guessedLetter.includes(letter)
+})
+// or
+// let unGuessedLetters = this.word.filter((letter)=>{
+    // we are going to store the letters which are not been guessed so,we are using ! (not operator)
+//     return !this.guessedLetter.includes(letter);
+// }) 
+// the game will be finished if the unGuessedLetters.length is equal to 0
+// const finished = unGuessedLetters.length === 0;
+// or
+// we can also use forEach method
+    // let finished = true;
+// this.word.forEach((letter)=>
+// {
+//     if(this.guessedLetter.includes(letter)){
+
+//     }else{
+//         finished = false;
+//     }
+// }
+// )
+
+
+if(this.noOfGuessesLeft === 0){
+    this.status = "failed";
+}else if(finished){
+    this.status = "finished"
+} else{
+    this.status = "playing"
+}
+
+
+}
+
+Hangman.prototype.getStatusMessage = function(){
+    if(this.status === "playing"){
+        return `Guesses left : ${this.noOfGuessesLeft}`
+    }
+    else if(this.status === "failed"){
+        return `Nice try! The word was "${this.word.join('')}"` //here join is used to convert arrays into string
+    }else{
+        return `Great work! you guessed the word`
+    }
+}
 
 Hangman.prototype.getPuzzle = function () {
     let puzzle = '';
@@ -66,7 +116,7 @@ Hangman.prototype.getPuzzle = function () {
         if (this.guessedLetter.includes(letter) || letter === ' ') {
             puzzle = puzzle + letter;
         } else {
-            puzzle = puzzle + '*'
+            puzzle = puzzle + '_'
         }
     })
 
@@ -77,27 +127,20 @@ Hangman.prototype.makeGuess = function (guess) {
     guess = guess.toLowerCase();
     const isUnique = !this.guessedLetter.includes(guess)
     const isBadGuess = !this.word.includes(guess)
+// to remove negative values 
+// if the status is not playing it will return and doesnt execute the below code 
+    if(this.status !== "playing"){
+        return
+    }
     if (isUnique) {
         this.guessedLetter.push(guess);
     }
     if (isUnique && isBadGuess) {
         this.noOfGuessesLeft = this.noOfGuessesLeft - 1;
     }
+    this.calculateStatus();
 }
-window.addEventListener('keypress', function (e) {
-    // the below line gives the name and character code of the key pressed
-    // console.log(e.key, "->", e.charCode);
-    // since we need only the characters
-    const guess = String.fromCharCode(e.charCode)
-    console.log(guess);
-})
-const game1 = new Hangman("Cat", 2);
-console.log(game1.getPuzzle());
-console.log(game1.makeGuess("c"));
 
-// console.log(generateString(5));
-// program to generate random strings
 
-// declare all characters
 
-// 
+ 
