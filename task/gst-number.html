@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/gst-num.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="contatiner gst-container">
+            <div class="row m-0 justify-content-center">
+                <div class="col-md-8 ">
+                    <div class="container">
+                        <div class="text-center">
+                            <div class="custom-control custom-switch">
+                                <span class="d-inline-block pr-5">Do you have GST number</span><input type="checkbox"
+                                    class="custom-control-input switch-input" id="switchBtn">
+                                <label class="custom-control-label switch-label" for="switchBtn"></label>
+                            </div>
+                        </div>
+                        <form class="mt-3">
+                            <div id="validGst">
+                                <div class="form-group d-flex justify-content-center">
+                                    <div class="custom-text">
+                                        <input type="text" class="form-control shadow-none" id="gstInput"
+                                            placeholder="please enter valid gst number" required />
+                                    </div>
+                                    <div class="">
+                                        <button class="btn btn-outline-secondary" type="button"
+                                            id="verifyButton">verify</button>
+                                    </div>
+                                </div>
+                                <span id="error-message" class="d-block text-center error"></span>
+                            </div>
+
+                            <div id="verified">
+                                <div class="form-group d-flex justify-content-center">
+                                    <label for="userName">Name:</label>
+                                    <input type="text" class="form-control ml-2 w-25" id="userName">
+                                </div>
+                                <div class="form-group d-flex justify-content-center">
+                                    <label for="userStatus">Status:</label>
+                                    <input type="text" class="form-control ml-2 w-25" id="userStatus">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group form-check text-center">
+                                        <input type="checkbox" class="form-check-input" id="checkAgree">
+                                        <label class="form-check-label" for="checkAgree">I confirm that above provided
+                                            gst details are belongs to my business</label>
+                                    </div>
+                                </div>
+
+                                <div class="btn-submit text-center">
+                                    <button type="submit" class="btn btn-primary " id="agreeButton">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <form action="" id="gstNotAvailable">
+                            <div class="form-group">
+                                <div class="form-group form-check text-center">
+                                    <input type="checkbox" class="form-check-input" id="noGstCheckAgree">
+                                    <label class="form-check-label" for="noGstCheckAgree">I confirm that my business doesn't
+                                        have any GST details </label>
+                                </div>
+                            </div>
+                            <div class="btn-submit text-center">
+                                <button type="submit" class="btn btn-primary" id="noGstNumber">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/jquery.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/js/gst-json.json"></script> -->
+    <script src="assets/js/gst-verify.js"></script>
+</body>
+
+</html>

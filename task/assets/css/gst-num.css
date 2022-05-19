@@ -1,0 +1,29 @@
+.main-border {
+    border: 2px solid gray;
+    width: 100%;
+    height: 320px;
+}
+.gst-container{
+    transform: translateY(50%);
+}
+/* .custom-switch .switch-label::before {
+    background-color: red;
+}
+
+.switch-input:checked~.switch-label::before {
+    background-color: green;
+
+}
+
+.custom-switch .switch-label::after {
+    background-color: green;
+}
+
+.custom-switch .switch-input:checked~.switch-label::after {
+    background-color: red;
+} */
+
+.error{
+    color: red;
+    font-size: 15px;
+}
