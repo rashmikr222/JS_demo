@@ -1,0 +1,53 @@
+/* screen background */
+.screen-background{
+    background-color: #9970b2;
+}
+/* form-container */
+.form-container{
+    background-color: white;
+    border: 1px solid #f5f5f7;
+    border-radius: 45px;
+}
+.form-pills{
+ border: 1px solid #f5f5f7;
+ border-radius: 20px;   
+}
+
+/* login */
+.login ,.sign-up {
+    width: 220px;
+
+}
+/* bacground-color */
+.form-pills .login-link.active, .form-pills .show>.login-link , .form-pills .sign-up-link.active, .form-pills .show>.sign-up-link{
+    color: white;
+    font-weight: bold;
+    background-color: #6b5bbd;
+    
+}
+.form-pills .login-link , .form-pills .sign-up-link{
+    border-radius: 20px;
+    color: #6b5bbd;
+}
+
+/* form */
+.password-group{
+    position: relative;
+}
+.show-password ,  .hide-password{
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+.form-login-button{
+    width: 220px;
+    color: white;
+    background-color: #6b5bbd;
+    font-weight: bold;
+}
+.empty-field , .wrong-number{
+    color: red;
+    font-size: 15px;
+    text-align: start;
+}
+
