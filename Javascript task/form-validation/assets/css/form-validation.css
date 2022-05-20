@@ -55,8 +55,24 @@
 }
 
 /* signup */
-.empty-email , .wrong-email{
+.empty-email , .wrong-email , .empty-name , .wrong-name{
     color: red;
     font-size: 15px;
     text-align: start; 
+}
+.signup-form .form-email{
+    position: relative;
+}
+.signup-form #email-field {
+    position: absolute;
+    top: 44px;
+    left: 0;
+}
+.signup-form .form-name{
+    position: relative;
+}
+.signup-form #name-field{
+    position: absolute;
+    top: 44px;
+    left: 0;
 }
