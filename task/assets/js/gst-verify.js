@@ -1,6 +1,4 @@
-// console.log("jsonobject", gstArr);
-// const jsonData = JSON.parse(gstArr);
-// console.log("json elements", gstArr);
+
 let userInput = document.querySelector('#switchBtn');
 // gst number giver by user
 const gstNumber = document.querySelector('#gstInput');
@@ -30,7 +28,7 @@ isgstValid.style.display = "none";
 userInput.addEventListener('click', function (e) {
     if (userInput.checked == true) {
         isgstValid.style.display = "block";
-        // checkGST();
+
         isGSTInvalid.style.display = "none";
     } else {
         isgstValid.style.display = "none";
@@ -39,27 +37,32 @@ userInput.addEventListener('click', function (e) {
 })
 
 gstNumberVerified.addEventListener('click', function () {
-    // fetch(gstArr)
-    //     .then(function (response) {
-    //         console.log('responce', response);
-            // The JSON data will arrive here
-    //     })
-    //     .catch(function (err) {
-    //         console.log('error',err);
-            // If an error occured, you will catch it here
-    //     });
-    //    console.log('gst data====>',gstArr);
-    // console.log("json",getJson);
-    // console.log("verified button gstNumber", gstNumber.value);
-    // if
-    // console.log("id",id);
+    const res = userData.map((data) => {
+    
+        return id  = data.id,
+               gstNum = data.gstNumber ,
+               uname =data.name,
+               ustatus = data.status
+    
+    }
+    ).join(",");
+    
+    console.log("map result", res);
+    console.log("map result", gstNum);
+
     let inputValue = gstNumber.value
     console.log(inputValue);
-    if (inputValue.match(/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/)) {
+    let stringCompare = inputValue.match(/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/)
+    console.log("comparing string ", stringCompare);
+    if (gstNum == stringCompare) {
 
         isVerified.style.display = "block";
         userInput.disabled = true;
-        errorMessage.innerHTML = ""
+        errorMessage.innerHTML = "";
+        console.log("response", res[2]);
+        // name and status
+        document.getElementById("userName").value = uname;
+        document.getElementById("userStatus").value = ustatus;
     } else {
         errorMessage.classList.add("error");
         errorMessage.innerHTML = "Please enter valid gst number";
