@@ -15,7 +15,7 @@
     <h1 class="text-center text-white pt-5">Form validation</h1>
     <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-md-6 ">
+            <div class=" col-md-6 ">
                 <div class="p-5 form-container">
                     <ul class="nav nav-pills mb-3 justify-content-center form-pills " id="pills-tab" role="tablist">
                         <li class="nav-item login" role="presentation">
@@ -38,12 +38,11 @@
                                     <input type="number"
                                         class="form-control shadow-none border border-top-0 border-right-0 border-left-0 border-radius-0"
                                         id="userMobileNumber" placeholder="Mobile Number" aria-describedby="telHelp"
-                                        maxlength="10"
-                                        >
+                                        maxlength="10">
 
                                 </div>
-                                
-                                
+
+
                                 <div class="form-group password-group">
 
                                     <input type="password"
@@ -59,32 +58,64 @@
                                     </div>
                                 </div>
                             </form>
-                            <p class="empty-field wrong-number correct-number" id="message-field"></p>
+                            <p class="empty-field wrong-number" id="message-field"></p>
                             <div class="text-center mx-auto ">
                                 <button type="submit" class="btn rounded-pill form-login-button"
-                                    id="form-login-button" >Login</button>
+                                    id="form-login-button">Login</button>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-sign-up" role="tabpanel"
                             aria-labelledby="pills-sign-up-tab">
-                            <form>
+                            <form class="signup-form">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                        anyone else.</small>
+
+                                    <input type="email"
+                                        class="form-control shadow-none border border-top-0 border-right-0 border-left-0 border-radius-0"
+                                        id="userEmailId" placeholder="Email ID" aria-describedby="telHelp">
+
+
+                                </div>
+                                <p class="empty-email wrong-email" id="email-field"></p>
+                                <div class="form-group">
+
+                                    <input type="text"
+                                        class="form-control shadow-none border border-top-0 border-right-0 border-left-0 border-radius-0"
+                                        id="userName" placeholder="Name" aria-describedby="telHelp">
+
+                                </div>
+
+                                <div class="form-group password-group">
+
+                                    <input type="password"
+                                        class="form-control shadow-none border border-top-0 border-right-0 border-left-0 border-radius-0 form-field"
+                                        placeholder="Password" id="signupuserPassword">
+
+                                </div>
+
+                                <div class="form-group password-group">
+
+                                    <input type="password"
+                                        class="form-control shadow-none border border-top-0 border-right-0 border-left-0 border-radius-0 form-field"
+                                        placeholder="Confirm Password" id="confirmPassword">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+
+                                    <input type="number"
+                                        class="form-control shadow-none border border-top-0 border-right-0 border-left-0 border-radius-0"
+                                        id="signupUserMobileNumber" placeholder="Mobile Number"
+                                        aria-describedby="telHelp" maxlength="10">
+
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <input type="checkbox" class="form-check-input" id="agreeButton">
+                                    <label class="form-check-label" for="agreeButton">I have read and agree to the terms
+                                        and conditions and privacy policy</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
+                            <div class="text-center mx-auto ">
+                                <button type="submit" class="btn rounded-pill form-signup-button"
+                                    id="form-signup-button">OTP Verify & Sign Up</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,8 +125,10 @@
     </div>
     <script src="assets/js/jquery.slim.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/email-id.js"></script>
     <script src="assets/js/mobile-number.js"></script>
     <script src="assets/js/form-validation.js"></script>
+    <script src="assets/js/sign-up.js"></script>
 </body>
 
 </html>

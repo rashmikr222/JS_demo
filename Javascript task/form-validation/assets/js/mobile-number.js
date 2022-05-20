@@ -1,7 +1,5 @@
 
 let isValidMobileNumber = function (mobileNumber) {
-
-
     console.log(mobileNumber);
     let messageField = document.querySelector('#message-field');  
     // ^ mobile number starts with digits

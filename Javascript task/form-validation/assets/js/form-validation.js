@@ -37,4 +37,6 @@ const loginButton = document.querySelector('#form-login-button');
 loginButton.addEventListener('click',function(){
     let mobileNumber = document.querySelector('#userMobileNumber').value;
     isValidMobileNumber(mobileNumber);
+    
 })
+

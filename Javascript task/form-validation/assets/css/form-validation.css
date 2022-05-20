@@ -39,11 +39,14 @@
     top: 0;
     right: 15px;
 }
-.form-login-button{
+.form-login-button , .form-signup-button{
     width: 220px;
     color: white;
     background-color: #6b5bbd;
     font-weight: bold;
+}
+.form-login-button:hover , .form-signup-button:hover{
+    color: white;
 }
 .empty-field , .wrong-number{
     color: red;
@@ -51,3 +54,9 @@
     text-align: start;
 }
 
+/* signup */
+.empty-email , .wrong-email{
+    color: red;
+    font-size: 15px;
+    text-align: start; 
+}
